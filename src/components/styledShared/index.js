@@ -5,7 +5,7 @@ export const ListSection = styled('section')`
   max-width: 350px;
   width: 30%;
   min-width: 250px;
-  overflow-y: auto;
+  overflow-y: scroll;
   background-color: ${colors.dark1};
   display: flex;
   flex-direction: column;
@@ -13,19 +13,10 @@ export const ListSection = styled('section')`
 `;
 
 export const List = styled('ul')`
-  position: relative;
-  overflow: auto;
-  flex-grow: 1;
+  overflow: scroll;
+  max-height: 100%;
   padding-left: 0px;
   margin-top: 0px;
-  margin-bottom: 0px;
-  &:after {
-    content: '';
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    box-shadow: 0px 0px 10vh 5vh ${colors.dark1};
-  }
 `;
 
 export const ListEntry = styled('li')`
